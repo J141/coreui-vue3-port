@@ -121,7 +121,7 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not ie"
+    "not ie > 0"
   ],
   "vetur": {
     "tags": "dist/vetur/coreui-tags.json",
