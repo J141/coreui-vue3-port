@@ -1,6 +1,6 @@
 # Vue 3 port of the CoreUI Vue component library
 
-![License](https://img.shields.io/npm/l/@coreui/vue?style=flat-square)[coreui]
+![License](https://img.shields.io/npm/l/@coreui/vue?style=flat-square)
 
 > Vue 3 port of the [@coreui/vue](https://npmjs.org/@coreui/vue) [(github)](https://github.com/coreui/coreui-vue) 3.2.7 package.
 
