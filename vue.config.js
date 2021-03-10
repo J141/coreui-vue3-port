@@ -1,14 +1,17 @@
 module.exports = {
-  configureWebpack:{
+  configureWebpack: {
     performance: {
-      hints: false
-    }
+      hints: false,
+    },
+    resolve: {
+      extensions: ['*', '.vue', '.ts', '.js'],
+    },
   },
   css: {
-    extract: false
+    extract: false,
   },
   transpileDependencies: [
     '@coreui/icons',
-    '@coreui/utils'
-  ]
-}
+    '@coreui/utils',
+  ],
+};

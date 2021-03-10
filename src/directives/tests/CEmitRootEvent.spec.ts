@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import CButton from '../../components/button/CButton'
+import CButton from '../../components/button/CButton.vue'
 import CEmitRootEvent from '../CEmitRootEvent'
 import Vue from 'vue'
 
