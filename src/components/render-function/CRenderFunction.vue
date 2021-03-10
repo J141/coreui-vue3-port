@@ -77,7 +77,7 @@ export default {
               const el = computeRenderFunction(child)
               return h(...el)
             } else if (child.slot) {
-              return this.$scopedSlots[child.slot]()
+              return this.$slots[child.slot]()
             }
           })
         }

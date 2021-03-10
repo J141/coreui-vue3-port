@@ -1,4 +1,4 @@
-import { mount } from "@vue/test-utils";
+import { mount } from '@vue/test-utils';
 import Component from '../CSwitch'
 
 const ComponentName = 'CSwitch'

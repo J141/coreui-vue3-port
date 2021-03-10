@@ -125,7 +125,7 @@
             >
               <template v-for="(colName, index) in rawColumnNames" >
                 <slot
-                  v-if="$scopedSlots[colName]"
+                  v-if="$slots[colName]"
                   :name="colName"
                   :item="item"
                   :index="itemIndex + firstItemIndex"
@@ -140,7 +140,7 @@
               </template>
             </tr>
             <tr
-              v-if="$scopedSlots.details"
+              v-if="$slots.details"
               @click="rowClicked(item, itemIndex + firstItemIndex, $event, true)"
               class="p-0"
               style="border:none !important"
@@ -225,7 +225,7 @@
     <CPagination
       v-if="pagination"
       v-show="totalPages > 1"
-      :activePage.sync="page"
+      v-model:activePage="page"
       :pages="totalPages"
       v-bind="typeof pagination === 'object' ? pagination : null"
     />
@@ -483,7 +483,7 @@ export default {
       }
     },
     haveFilterOption () {
-      return this.tableFilter || this.cleaner || this.$scopedSlots.cleaner
+      return this.tableFilter || this.cleaner || this.$slots.cleaner
     }
   },
   methods: {
@@ -548,7 +548,7 @@ export default {
     headerStyles (index) {
       let style = 'vertical-align:middle;overflow:hidden;'
       if (this.isSortable(index)) {
-        style += `cursor:pointer;`
+        style += 'cursor:pointer;'
       }
       if (this.fields && this.fields[index] && this.fields[index]._style) {
         style += this.fields[index]._style
@@ -595,9 +595,9 @@ export default {
              JSON.stringify(obj1) === JSON.stringify(obj2)
     },
     clean() {
-      this.tableFilterState = ""
+      this.tableFilterState = ''
       this.columnFilterState = {}
-      this.sorterState = { column: "", asc: true }
+      this.sorterState = { column: '', asc: true }
     }
   }
 }

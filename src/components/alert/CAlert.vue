@@ -17,8 +17,10 @@
 </template>
 
 <script>
+import { defineComponent } from 'vue'
 import CButtonClose from '../button/CButtonClose'
-export default {
+
+export default defineComponent({
   name: 'CAlert',
   components: { CButtonClose },
   props: {
@@ -83,7 +85,7 @@ export default {
       }
     }
   }
-}
+});
 </script>
 
 <style scoped>

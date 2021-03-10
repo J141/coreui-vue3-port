@@ -129,11 +129,11 @@ describe(ComponentName, () => {
     const localWrapper = createCustomWrapper()
     const input = localWrapper.find('input')
     const firstUsername = () => localWrapper.vm.sortedItems[0].username
-    input.element.value = "Estavan"
+    input.element.value = 'Estavan'
     input.trigger('input')
     expect(firstUsername()).toMatch('Estavan')
     localWrapper.setProps({ tableFilter: { lazy: true } })
-    input.element.value = "Chetan"
+    input.element.value = 'Chetan'
     input.trigger('input')
     expect(firstUsername()).toMatch('Estavan')
     input.trigger('change')

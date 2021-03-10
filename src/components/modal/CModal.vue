@@ -149,7 +149,7 @@ export default {
     hide (e, accept = false) {
       this.$emit('update:show', false, e, accept)
       if(this.visible){
-        window.removeEventListener("keydown", this.hideEsc ); 
+        window.removeEventListener('keydown', this.hideEsc ); 
       }
     },
     hideEsc (event){

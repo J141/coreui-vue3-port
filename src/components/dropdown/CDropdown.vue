@@ -109,7 +109,7 @@ export default {
   methods: {
     checkClick (e) {
       if (
-        this.$scopedSlots.toggler && 
+        this.$slots.toggler && 
         this.$el.firstElementChild.contains(e.target)
       ) {
         this.toggle(e)
